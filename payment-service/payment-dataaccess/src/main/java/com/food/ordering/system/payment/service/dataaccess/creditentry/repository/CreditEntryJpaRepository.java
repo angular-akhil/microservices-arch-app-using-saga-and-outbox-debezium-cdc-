@@ -12,7 +12,6 @@ import java.util.UUID;
 @Repository
 public interface CreditEntryJpaRepository extends JpaRepository<CreditEntryEntity, UUID> {
 
-    @Lock(LockModeType.PESSIMISTIC_WRITE)
     Optional<CreditEntryEntity> findByCustomerId(UUID customerId);
 
 
