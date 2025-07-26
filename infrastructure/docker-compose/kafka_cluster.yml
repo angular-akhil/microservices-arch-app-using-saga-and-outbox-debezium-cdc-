@@ -91,7 +91,7 @@ services:
       - kafka-broker-3
       - schema-registry
     volumes:
-      - "/Users/Shared/debezium-connector-schemaregistry-7.2.5:/kafka/connect/debezium-connector-schemaregistry-7.2.5"
+      - "/mnt/c/Users/4HIN/Downloads/debezium-connector-schema-registry-7.2.5:/kafka/connect/jars"
     networks:
       - ${GLOBAL_NETWORK:-kafka}
   kafka-ui:
