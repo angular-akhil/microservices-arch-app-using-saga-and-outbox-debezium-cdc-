@@ -5,6 +5,8 @@ import lombok.*;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import jakarta.persistence.Version;
+
 import java.math.BigDecimal;
 import java.util.Objects;
 import java.util.UUID;
@@ -21,7 +23,9 @@ public class CreditEntryEntity {
     @Id
     private UUID id;
     private UUID customerId;
-    private BigDecimal totalCreditAmount;
+    private BigDecimal totalCreditAmount;  
+    @Version
+    private int version;
 
     @Override
     public boolean equals(Object o) {
